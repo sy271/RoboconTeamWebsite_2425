@@ -3,9 +3,7 @@ import Autocar from '../../Picture/2024/autocar2024.JPG';
 import AutocarCompetition from '../../Picture/2022/2022AutocarCompetition3.jpg';
 import JuniorTraining from '../../Picture/2023/2023JuniorTraining.jpeg';
 import DepartmentTraining from '../../Picture/2023/2023DepartmentTraining.JPG';
-import RBC from '../../Picture/2023/2023FullRoboconMalaysia.JPG';
 import ABU from '../../Picture/2023/2023ABURobocon.jpeg';
-import White from './White.png';
 
 export const upcoming = [
     {

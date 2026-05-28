@@ -1,4 +1,4 @@
-import { SiGmail, SiMessenger, SiFacebook, SiInstagram, SiYoutube, SiLinkedin, SiDiscord, SiHomeassistant } from 'react-icons/si';
+import { SiGmail, SiMessenger, SiFacebook, SiInstagram, SiYoutube, SiDiscord, SiHomeassistant } from 'react-icons/si';
 
 const contacts = [
     {

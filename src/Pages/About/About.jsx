@@ -2,7 +2,7 @@ import React from 'react';
 import About from '../../Components/About/About.jsx';
 import Footer from '../../Components/Footer/Footer';
 
-const AboutUs = ({}) => {
+const AboutUs = () => {
   return (
     <>
       <About />
