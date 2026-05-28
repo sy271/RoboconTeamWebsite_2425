@@ -1,0 +1,206 @@
+/*
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500|Jost:400,500,600&display=swap");
+
+.partnership_container{
+  box-sizing: border-box;
+}
+.sponsoring {
+  width: 25rem;
+  height: 30rem;
+  padding: 1rem 0;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 10px #dfdfdf;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.25s linear;
+}
+/* .sponsoring.is-active {
+  width: 650px;
+}
+.sponsoring[data-state="#about"] {
+  height: 360px;
+}
+.sponsoring[data-state="#experience"] {
+  height: 520px;
+}
+.sponsoring[data-state="#contact"] {
+  height: 430px;
+} */
+.sponsoring-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+.sponsoring-avatar {
+  width: 5rem;
+  height: 5rem;
+  border: 0.3rem solid var(--color-white);
+  background-color: var(--color-black);
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+.sponsoring-fullname {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.sponsoring-jobtitle {
+  margin: 5px 0 0 0;
+  font-size: 11px;
+  font-weight: 300;
+  color: #808080;
+}
+.sponsoring-main {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  transition: all 0.25s linear;
+}
+.sponsoring-section {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.25s linear;
+}
+.sponsoring-section.is-active {
+  opacity: 1;
+}
+.sponsoring-about,
+.sponsoring-timeline,
+.sponsoring-contact-wrapper {
+  display: none;
+}
+.sponsoring-section.is-active .sponsoring-about,
+.sponsoring-section.is-active .sponsoring-timeline,
+.sponsoring-section.is-active .sponsoring-contact-wrapper {
+  display: block;
+}
+.sponsoring-subtitle {
+  font-size: 13px;
+  color: #dfdfdf;
+  margin-bottom: 15px;
+  position: relative;
+}
+.sponsoring-subtitle:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #eee;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+}
+.sponsoring-desc {
+  margin: 0 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #808080;
+}
+.sponsoring-timeline {
+  margin: 0 0 10px 0;
+  padding: 0;
+  list-style: none;
+}
+.sponsoring-item {
+  padding-left: 20px;
+  border-left: 2px solid #eee;
+  position: relative;
+  margin: 0 0 15px 0;
+}
+.sponsoring-item:last-child {
+  margin: 0;
+}
+.sponsoring-item:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border: 2px solid #e74c3c;
+  border-radius: 50%;
+  position: absolute;
+  left: -5px;
+  top: 5px;
+}
+.sponsoring-item-title {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.sponsoring-item-title span {
+  color: #e74c3c;
+}
+.sponsoring-item-desc {
+  margin: 0;
+  font-size: 12px;
+  color: #808080;
+}
+.sponsoring-contact {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  justify-content: flex-start; 
+  margin-right: 0.5rem;
+  color: #606060;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2.5;
+}
+.sponsoring-contact svg {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px 0 0;
+  opacity: 0.5;
+}
+.sponsoring-buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+}
+.sponsoring-buttons button {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  color: #808080;
+  margin: 0 5px;
+  cursor: pointer;
+  position: relative;
+}
+.sponsoring-buttons button.is-active {
+  color: #e74c3c;
+}
+.sponsoring-buttons button.is-active:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #e74c3c;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+}
+.contact-me {
+  border: 1px solid #e74c3c;
+  background: none;
+  padding: 10px 15px;
+  font-size: 10px;
+  border-radius: 50px;
+  color: #e74c3c;
+  cursor: pointer;
+  margin: 20px 0 0 0;
+  transition: all 0.25s linear;
+}
+.contact-me:hover {
+  background: #e74c3c;
+  color: #fff;
+}
+*/

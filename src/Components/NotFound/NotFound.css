@@ -1,0 +1,25 @@
+.notfound_container{
+    text-align: center;
+}
+
+.notfound_container .btn{
+    margin-top: 2rem;
+    display: inline-block;
+    margin-bottom: 10rem;
+}
+
+.notfound_container h3{
+    margin-top: 2rem;
+    font-size: 6rem;
+    color: transparent;
+    background: var(--rbc-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 2px 1px 4px transparent;
+}
+
+@media screen and (max-width: 600px){
+    .notfound_container h3{
+        font-size: 3rem;
+    } 
+}

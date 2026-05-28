@@ -1,0 +1,366 @@
+
+.NAV {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  margin-top: 0.5rem;
+  background: var(--color-darkNav);
+  width: 100%;
+  height: 4rem;
+}
+
+.NavNonSkew{
+  transform: skew(20deg);
+  color: transparent;
+  background: var(--rbc-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 2px 1px 4px transparent;
+  font-size: 2rem;
+  padding: 0;
+}
+
+.NavSkew{
+  transform: skew(0deg);
+}
+
+.NavLeft{ 
+  transform: skew(-20deg);
+  width: 20%;
+  margin-left: -1rem;
+  background: -webkit-linear-gradient(45deg, var(--color-primary), var(--color-bg-variant));
+  background: linear-gradient(45deg, var(--color-primary), var(--color-bg-variant));
+  &:hover {
+      animation-name: logo-hover;
+      animation-duration: 0.3s;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(0.17, 0.57, 0.31, 0.85);
+  }
+}
+
+@keyframes logo-hover {
+  20% {
+    padding-right: -1em;
+  }
+  100% {
+    padding-right: 4em;
+  }
+}
+
+.NAV_logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  color: var(--color-primary);
+}
+
+.NAV_logo img{
+  width: 4rem;
+  height: 4rem;
+  margin: 0.25em 0.5em 0.25em 1em;
+}
+
+.NavRight ul{
+  display: flex;
+  justify-content: flex-end;
+  color: var(--color-primary);
+}
+
+.NavRight ul li{
+  list-style: none;
+  font-size: 1.2rem;
+  margin-right: 0.7rem;
+  margin-left: 0.7rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.NavRight ul li:hover{
+  color: var(--color-whiteNav2);
+}
+
+.Navsublink{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: absolute;
+  background-color: var(--color-darkNav2);
+  margin-top: 1rem;
+  overflow-x: hidden; /* Hide horizontal overflow if content exceeds the screen width */
+  width: 20rem;
+  z-index: 1;
+}
+.Navsublink ul li{
+  list-style: none;
+  font-size: 1.2rem;
+  overflow: hidden; /* Prevent text overflow */
+  white-space: nowrap;
+}
+.active{
+  color: var(--color-whiteNav);
+}
+.mobile-menu-icon{
+  display: none;
+}
+
+.NavRight {
+  display: flex;
+  align-items: center;
+}
+.pie-container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 80px; /* Adjust the top position as needed */
+  left: 50%; /* Adjust the left position as needed */
+  transform: translateX(-50%);
+  z-index: 1;
+}
+/* 
+.pie {
+  width: 12rem;
+  height: 3rem;
+  border: 6px solid var(--color-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-bg-variant);
+  cursor: pointer;
+  position: absolute;
+  transition: transform 0.3s;
+}
+
+.pie-color {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pie-link {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.pie-link:hover {
+  color: #fff; 
+}
+.pie6 {
+  transform: translateX(15rem) translateY(-3rem);
+}
+
+.pie5 {
+  transform: rotate(60deg) translateX(5rem) translateY(-5rem) rotate(-60deg);
+}
+
+.pie4 {
+  transform: rotate(120deg) translateX(5rem) translateY(5rem) rotate(-120deg);
+}
+
+.pie3 {
+  transform: rotate(180deg) translateX(15rem) translateY(3rem) rotate(-180deg);
+}
+
+.pie2 {
+  transform: rotate(240deg) translateX(5rem) translateY(5rem) rotate(-240deg);
+}
+
+.pie1 {
+  transform: rotate(300deg) translateX(5rem) rotate(-300deg);
+} */
+
+@media screen and (max-width: 1200px) {
+  .NavNonSkew{
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .NAV {
+    margin-top: 1rem;
+    height: 3.5rem;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Place items at the top of the container */
+  }
+  .Navsublink{
+    width: 15rem;
+  }
+  .NavLeft{
+    width: 35%;
+    margin-top: -0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .NavSkew p{
+    font-size: 2.8rem;
+  }
+  .NAV_logo img {
+    width: 4rem;
+    height: 4rem;
+    margin: 0.25em 0.5rem 0.25em 0rem;
+  }
+}
+/* 
+@media screen and (max-width: 800px) {
+  .NAV{
+    margin-top: 6rem;
+  }
+  .NavRight ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none; 
+    padding: 0; 
+    margin-top: 0.5rem;
+  }
+
+  .NavRight ul li {
+    width: 4rem; 
+    height: 4rem; 
+    margin: 0.5rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .NavRight ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: var(--color-bg-variant);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .NavRight ul li a:hover {
+    transform: scale(1.1);
+  }
+}
+
+
+
+
+@media screen and (max-width: 750px) {
+  .NAV_logo img {
+    width: 3rem;
+    height: 3rem;
+    margin: 0.25em 0.5rem 0.25em 0.5rem;
+  }
+  .NavSkew p{
+    font-size: 2rem;
+  }
+  .NAV{
+    height: 2.8rem;
+  }
+  .NavLeft{
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .NavLeft{
+    margin-top: -0.5rem;
+  }
+  
+  .Navsublink{
+    width: 10rem;
+  }
+.NavRight ul li a{
+  font-size: 1.2rem;
+}
+}
+
+
+@media screen and (max-width: 550px) {
+  .NAV_logo img {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin: 0.25em 0.5rem 0.25em 0rem;
+    padding: 0;
+  }
+  .Navsublink{
+    width: 8rem;
+  }
+  .NavSkew p{
+    font-size: 1.8rem;
+  }
+  .NavLeft{
+    margin-top: -0.3em;
+  }
+  .NavRight ul li a{
+    font-size: 1rem;
+  }
+}
+
+
+@media screen and (max-width: 460px) {
+  .NavRight ul li{
+    margin: 0.6rem;
+  }
+  .NAV{
+    height: 2rem;
+  }
+  .NavLeft{
+    margin-top: -0.45rem;
+  }
+  .NAV_logo img {
+    width: 2rem;
+    height: 2rem;
+  }
+  .NavSkew p{
+    font-size: 1.5rem;
+  }
+  .NavRight ul li a{
+    font-size: 0.8rem;
+  }
+  .Navsublink{
+    width: 8rem;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .NavRight ul li{
+    margin: 0.5rem;
+  }
+  .NavRight ul li a{
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .NAV{
+    height: 1.6rem;
+  }
+  .NAV_logo img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .NavSkew p{
+    font-size: 1.2rem;
+  }
+  
+  .NavRight ul li a{
+    font-size: 0.6rem;
+  }
+  .Navsublink{
+    margin-top: 0;
+  }
+} */

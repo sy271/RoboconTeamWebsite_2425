@@ -1,0 +1,158 @@
+/* bureau.css */
+#bureau{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#bureau h3{
+  color: var(--color-primary-variant);
+}
+.bureau-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:2rem;
+  }
+  .bureau-title{
+    color: var(--color-primary-variant);
+    margin-bottom: 1rem;
+  }
+  .bureau-title h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .row {
+    display: flex;
+    gap: 1rem;
+  }
+  .bureau{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    width: 17rem;
+    background-color: var(--color-bg);
+    border-radius: 5px;
+    padding: 1rem;
+    transition: var(--transition);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .bureau.status-dark {
+    background-color: var(--color-bg-variant);
+  }
+  .bureau-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    font-size: 3rem;
+    color: white;
+  }
+  .bureau-logo.gmail-have:hover{
+    background-color: #D44638;
+  }
+  .bureau-smalltitle{
+    margin: 1rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .bureau-smalltitle h3{
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  .icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .bureau_icon {
+    font-size: 2.5rem;
+    color: white;
+  }
+  .bureau_gmail{
+    height: 2rem;
+    margin: 1rem 0;
+  }
+  .bureau_gmail p b{
+    font-size: 1rem;
+  }
+  .bureau_person {
+    text-align: center;
+    height: 7rem;
+    color: var(--color-white);
+  }
+  
+  .bureau_person:hover{
+    color: var(--color-primary);
+  }
+
+  .bureau_person p a{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .bureau_person b {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  .bureau_person a {
+    color: var(--color-white);
+    font-size: 0.8rem;
+  }
+  
+  .bureau_person a:hover {
+    color: var(--color-primary);
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .bureau-smalltitle{
+      height: auto;
+    }
+    .bureau_person {
+      height: auto;
+      margin-bottom: 2rem;
+    }
+    .bureau-logo {
+      margin: 1rem 0;
+      padding: 0;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .bureau{
+      gap: 0.8rem;
+    }
+  }
+  
+  @media screen and (max-width: 340px) {
+    .bureau{
+      width: 16.5rem;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .bureau p b {
+      font-size: 0.8rem;
+    }
+  }

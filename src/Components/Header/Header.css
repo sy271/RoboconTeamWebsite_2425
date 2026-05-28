@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&family=Poppins:wght@300;400&family=Silkscreen&display=swap');
+
+header{
+    height: 150vh;
+    overflow: hidden;  
+}
+
+.header_container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;   
+}
+
+.header_container h1{
+    font-family: 'Noto Serif', serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Silkscreen', cursive;
+    color: var(--color-primary);
+    font-size: 5rem;
+}
+
+.header_container h5{
+    color: var(--color-primary-variant);
+    font-size: 2rem;
+}
+
+@keyframes dropFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header_container h5, 
+.header_container h1 {
+  animation: dropFromTop 3s ease forwards;
+}
+
+.header_container .text-light{
+    font-family: 'Noto Serif', serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Silkscreen', cursive;
+}
+
+.text-light{
+  display: inline;
+  font-size: 2.5rem;
+}
+
+/*--CTA--*/
+.header_cta{
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+/*--Header Social--*/
+ .header_socials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+    font-size: 2rem; 
+ }
+
+ .header_socials::after{
+    content:'';
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+ }
+
+ /*--rbc logo--*/
+ .header_container img{
+  width: 25rem;
+  height: 25rem;
+  margin-top: 3rem;
+  animation: floating 3.5s ease-in-out infinite;
+  animation-delay: 1.5s;
+ }
+ 
+
+ .me {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center; /* Center the text inside */
+    height: 100%; 
+    margin-top: 1rem;
+    padding: 5rem 1.5rem 1.5rem 5rem;
+    max-width: 30rem;
+    max-height: 30rem;
+}
+
+.me img{
+    animation: floating 3.5s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+ @keyframes floating {
+    from {
+      transform: translate(0, 0px);
+    }
+    50% {
+      transform: translate(0px, 30px);
+    }
+    to {
+      transform: translate(0, 0px);
+    }
+  }
+
+  .shadow{
+    color: transparent;
+    background: var(--color-light);
+    width: 15rem;
+    font-size: 1rem;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 4rem;
+    filter: blur(1px);
+    animation: shadow 3.5s ease-in-out infinite;
+  }
+  @keyframes shadow{
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.5);
+    }
+  }
+
+ @keyframes circle-in-center {
+  from {
+    clip-path: circle(0%);
+  }
+  to {
+    clip-path: circle(125%);
+  }
+}
+
+[transition-style="in:circle:center"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-center both;
+}
+
+/*--scroll down--*/
+ .scroll_down{
+    position: absolute;
+    right:-2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 1.5rem;
+ }
+
+ /*---medium device---*/
+ 
+@media screen and (max-width: 1280px){
+
+  header{
+      height: 140vh;
+  }
+}
+@media screen and (max-width: 1024px){
+    
+    .header_container img{
+        width: 20rem;
+        height: 20rem;
+    }
+    .shadow{
+      width: 10rem;
+    }
+  }
+  
+@media screen and (max-width: 800px){
+  header{
+      height: 150vh;
+  }
+  
+  .header_container img{
+    width: 16rem;
+    height: 16rem;
+  }
+}
+
+@media screen and (max-width: 650px){
+  .header_socials a{
+    font-size: 1.3rem;
+  }
+  
+}
+  /*---small device---*/
+  @media screen and (max-width: 600px){
+    header{
+        height: 100vh;
+    }
+    .header_container h1{
+        font-size: 2.5rem;
+    }
+    .header_container h5{
+        font-size: 1.5rem;
+    }
+    .header_container img{
+        width: 12rem;
+        height: 12rem;
+    }
+    .shadow{
+        display: none;
+    }
+    .header_socials, .scroll_down{
+        display: none;
+    }
+  }
+  
+@media screen and (max-width: 450px){
+  header{
+    height: 95vh;
+}
+  .header_container img{
+      width: 10rem;
+      height: 10rem;
+  }
+}
+
+  
+@media screen and (max-width: 350px){
+  header{
+    height: 100vh;
+}
+}

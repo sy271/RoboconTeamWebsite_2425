@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Permanent+Marker&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root{
+  --color-bg: #1f1f38;
+  --color-bg-variant: #2c2c6c;
+  --color-primary: #4db5ff;
+  --color-primary-variant: rgba(77, 181, 255, 0.6);
+  --color-primary1: #4db5ff;
+  --color-primary1-variant: rgba(77, 181, 255, 0.6);
+  --color-primary2: #7d7bfd;
+  --color-primary2-variant: rgb(185, 184, 247);
+  --color-bloodRed: rgb(104, 0, 0);
+  --color-bloodRed-variant: rgba(104, 0, 0, 0.5);
+  --color-venetianRed: rgb(207, 16, 16);
+  --color-white: #e7e7e7;
+  --color-whiteNav: #e7e7e7;
+  --color-black: #101010;
+  --color-light: rgba(255, 255, 255, 0.6);
+  --color-dark: rgba(0, 0, 0, 0.5);
+  --color-darkNav: rgba(0, 0, 0, 0.5);
+  --color-darkNav2: #1f1f1f;
+
+  --rbc-gradient: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(235,25,47,1) 63%, rgba(205,2,22,1) 100%);
+  --word-gradient: linear-gradient(90deg, rgba(244,125,125,1) 0%, rgba(153,95,242,1) 22%, rgba(61,41,233,1) 47%, rgba(73,126,231,1) 66%, rgba(78,186,250,1) 83%, rgba(67,224,241,1) 100%);
+  
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+
+  --transition: all 400ms ease;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+body{
+  font-family: 'Noto Serif', serif;
+  font-family: 'Poppins', sans-serif;
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(25,4,59,1) 24%, rgba(12,3,87,1) 47%, rgba(5,38,102,1) 66%, rgba(4,65,101,1) 83%, rgba(4,73,80,1) 100%);
+  background-size: 400% 200%;
+  animation: bgmove 15s ease infinite;
+  line-height: 1.7;
+}
+  @keyframes bgmove{
+    0%{
+      background-position: 0% 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0% 50%;
+    }
+  }
+
+/*---general styles---*/
+.container{
+  width: var(--container-width-lg);
+  margin: 0 auto; /* top n bottom 0, left n right auto */
+}
+
+h1,h2,h3,h4,h5{
+  font-weight: 500;
+}
+
+h1{
+  font-size: 2.5rem;
+}
+
+h2{
+  font-size: 3rem;
+}
+
+h3{
+  font-size: 2rem;
+}
+h5{
+  font-size: 2rem;
+}
+section{
+  margin: 0 1rem;
+}
+
+.top{
+  padding-top: 8rem;
+}
+@keyframes dropFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section > h2, section > h5{
+  text-align: center;
+  color: var(--color-light);
+}
+
+section > h2{
+  color: var(--color-primary);
+  margin-bottom: 3rem;
+}
+
+.text-ligth{
+  color: var(--color-light);
+}
+
+a{
+  color: var(--color-primary);
+  transition: var(--transiion);
+  font-size: 1.5rem;
+}
+
+a:hover{
+  color: var(--color-white);
+}
+
+.home{
+  margin-top: 5rem;
+}
+
+/*---buttons---*/
+.btn{
+  width: max-content;
+  display: inline-block;
+  text-align: center;
+  color: var(--color-primary);
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid var(--color-primary);
+  transition: var(--transition);
+}
+
+.btn:hover{
+  background: var(--color-primary);
+  color: var(--color-bg);
+  border-color: transparent;
+}
+
+.btn-primary{
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.button{
+  z-index: 1;
+  position: relative;
+  color: var(--color-white);
+  padding: 0.75rem 1.2rem;
+  background-color: var(--color-venetianRed);
+  cursor: pointer;
+}
+
+.button::before{
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 4px solid var(--color-bloodRed);
+  transform-origin: center;
+  transform: scale(1);
+}
+
+.button:hover::before{
+  transition: all 0.75s ease-in-out;
+  transform-origin: center;
+  transform: scale(1.75);
+  opacity: 0;
+}
+
+img{
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+/* Full-screen overlay */
+.full-screen-overlay {
+  position: fixed; /* Fixed position to cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  z-index: 9999; /* Ensure the overlay is on top of other content */
+}
+
+.full-screen-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.full-screen-image img {
+  max-width: 90%; /* Ensure the image fits within the viewport */
+  max-height: 90%; /* Ensure the image fits within the viewport */
+  object-fit: contain; /* Maintain aspect ratio while fitting the image within the container */
+  cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999999;
+  overflow: hidden;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  max-width: auto;
+  max-height: 80%;
+}
+
+.close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--color-white);
+  font-size: 3rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+.modal img {
+  width: 70%;
+  height: auto;
+}
+
+.modal.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*---medium device---*/
+@media screen and (max-width: 1100px){
+  .top{
+    padding-top: 12rem;
+  }
+}
+@media screen and (max-width: 1024px){
+  .container{
+    width: var(--container-width-md);
+  }
+}
+
+@media screen and (max-width: 800px){
+  .top{
+    padding-top: 8rem;
+  }
+}
+
+@media screen and (max-width: 750px){
+  .top{
+    padding-top: 7rem;
+  }
+}
+/*---small device---*/
+@media screen and (max-width: 650px){
+  .container{
+    width: var(--container-width-sm);
+  }
+  section > h2{
+    margin-bottom: 1rem;
+  }
+  a{
+    font-size: 0.8rem;
+  }
+  
+  h2{
+    font-size: 1.5rem;
+  }
+
+  h3{
+    font-size: 1rem;
+  }
+  h5{
+    font-size: 1rem;
+}
+}
+
+
+@media screen and (max-width: 550px){
+  .top{
+    padding-top: 5rem;
+  }
+}
+@media screen and (max-width: 380px){
+  .top{
+    padding-top: 4rem;
+  }
+}
+
+/* Ensure video controls are always visible */
+video::-webkit-media-controls {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: flex !important;
+}
+
+video::-webkit-media-controls-panel {
+  display: flex !important;
+}

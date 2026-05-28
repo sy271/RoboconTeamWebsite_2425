@@ -1,0 +1,68 @@
+/* Dark mode styles */
+  body.dark-mode {
+    --color-bg: #5f5fd7;
+    --color-bg-variant: #9696f7;
+    --color-whiteNav: #696969; 
+    --color-whiteNav2: #696969; 
+    --color-darkNav: rgb(240, 238, 238);
+    --color-darkNav2: #f5f4f4;
+
+    --color-primary: #3d0f68;
+    --color-primary-variant: rgb(247, 245, 116);
+    --color-primary1-variant: #3d0f68;
+    --color-primary1: rgb(247, 245, 116);
+    --color-primary2: #7105d798;
+    --gradient-border: linear-gradient(45deg, #EB5160, #8F3985, #8DAA91, #888DA7);
+    background: rgb(255,222,222);
+    background: linear-gradient(90deg, rgba(255,222,222,1) 0%, rgba(206,177,251,1) 24%, rgba(182,174,250,1) 47%, rgba(175,202,255,1) 66%, rgba(187,227,251,1) 83%, rgba(184,248,255,1) 100%);
+    animation: BackgroundMove 15s ease infinite;
+  }
+
+  @keyframes BackgroundMove{
+    0%{
+      background-position: 0% 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0% 50%;
+    }
+  }
+  
+  
+  
+  .ButtonChangeTheme{
+    width: max-content;
+    display: inline-block;
+    color: var(--color-primary);
+    padding: 0.75rem 1.2rem;
+    cursor: pointer;
+    transition: var(--transition);
+    background-color: transparent;
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .ButtonChangeTheme:hover{
+    color: var(--color-white);
+  }
+
+  @media screen and (max-width: 1100px) {
+    .ButtonChangeTheme{
+      font-size: 1.5rem;
+      padding: 0.5rem;
+    }
+  }
+  
+  @media screen and (max-width: 650PX) {
+    .ButtonChangeTheme{
+      font-size: 1rem;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .ButtonChangeTheme{
+      font-size: 0.7rem;
+      padding: 0rem;
+    }
+  }

@@ -1,0 +1,208 @@
+.achievement {
+    max-width: 1500px;
+    margin: 1rem auto;
+    background-color: var(--color-bg);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 3rem; /* Add margin at the top */
+    margin-bottom: 3rem; /* Add margin at the bottom */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .table{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+  }
+
+.achievement table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.achievement th,
+.achievement td {
+  padding: 1rem;
+  text-align: center;
+  border: 2px solid #ccc;
+}
+.achievement th{
+    color: var(--color-white);
+    background: var(--color-bg);
+    font-size: 1.8rem;
+}
+.achievement td{
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  color: var(--color-light);
+  background: var(--color-bg);
+}
+.achievement th:hover{
+  color: var(--color-bg);
+  background: var(--color-primary);
+}
+.achievement td:hover{
+    font-size: 1.3rem;
+    color: var(--color-bg);
+    background: var(--color-primary);
+}
+.logoANDtheme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.logo_theme {
+    position: relative; /* Required to position the background */
+    width: 12rem; /* Set a fixed width for the square container */
+    height: 12rem; /* Set a fixed height for the square container */
+    background-color: white; /* Set the white background color for the square */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center the content vertically within the square */
+    gap: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-left: 5px;
+  }
+  
+  .logo_theme img {
+    max-width: 100%; /* Make the image fill the container */
+    max-height: 100%; /* Make the image fill the container */
+    height: auto;
+    border-radius: 10px; /* Match the container's border-radius */
+  }
+  
+
+.award img {
+  max-width: 50rem;
+  height: auto;
+}
+
+.award ul{
+    text-align: left;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .logo_theme{
+    height: 7rem;
+    width: 7rem;
+  }
+  .award img {
+    width: 20rem;
+  }
+  .achievement  th{
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .logo_theme{
+    height: 5rem;
+    width: 5rem;
+  }
+  .award img {
+    width: 18rem;
+  }
+  .achievement th,
+  .achievement td{
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .achievement table {
+    display: wrap;
+    width: 100%;
+
+  }
+  .table_head{
+    display: none;
+  }
+  .achievement tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .achievement th{
+    display: none;
+  }
+  .achievement td {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    text-align: center;
+    border: none;
+  }
+  .achievement td:hover{
+    color: var(--color-bg);
+    background: var(--color-primary);
+  }
+
+  .logo_theme img{
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo_theme{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+    width:7rem;
+    height:7rem;
+  }
+  .award{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .award img{
+    height: 20rem;
+    width: 30rem;    
+  }
+}
+
+@media screen and (max-width: 500px) {
+  
+  .achievement td {
+    font-size: 1rem;
+  }
+  
+  .logo_theme{
+    width: 5rem;
+    height: 5rem;
+  }
+  .award img{
+    height: 15rem;
+    width: 20rem;    
+  }
+}
+@media screen and (max-width: 380px) {
+  
+  .achievement th,
+  .achievement td {
+    font-size: 0.8rem;
+  }
+  .achievement td:hover{
+    font-size: 1rem;
+  }
+  
+  .logo_theme{
+    width: 4rem;
+    height: 4rem;
+  }
+  .award img{
+    height: 12rem;
+    width: 15rem;    
+  }
+}

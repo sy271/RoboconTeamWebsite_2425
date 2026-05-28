@@ -1,0 +1,117 @@
+.container.previous-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.btn-same2{
+  width: 8rem;
+  height: 3.5rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.scroll_UP {
+  position: fixed; /* Fixed position */
+  right: 2rem;
+  bottom: 5rem; /* Adjust this value to control the vertical position */
+  transform: rotate(90deg);
+  font-weight: bold;
+  font-size: 1.5rem;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.filter-container{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  font-size: 2rem;
+}
+.filter-container select{
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  text-align: right;
+  margin-left: 0.5rem;
+}
+@media screen and (max-width: 1250px){
+  .scroll_UP {
+    right: -1rem;
+  }
+}
+@media screen and (max-width: 1084px){
+  .container.previous-container{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .btn-same2{
+    width: 5rem;
+    height: 3.5rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 1020px){
+  .scroll_UP {
+    right: 3rem;
+  }
+}
+@media screen and (max-width: 900px){
+  .scroll_UP {
+    right: 0rem;
+  }
+}
+@media screen and (max-width: 800px){
+  .container.previous-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.8rem;
+  }
+  .scroll_UP {
+    right: -1rem;
+  }
+}
+
+@media screen and (max-width: 650px){
+  .filter-container{
+    font-size: 1.3rem;
+  }
+  .filter-container select{
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 500px){
+  .container.previous-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.6rem;
+  }
+  .btn-same2{
+    width:  5rem;
+    height: 3rem;
+  }
+  .scroll_UP {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 340px){
+  .btn-same2{
+    width:  4rem;
+    height: 3rem;
+    margin: 0;
+    padding: 0;
+  }
+
+}

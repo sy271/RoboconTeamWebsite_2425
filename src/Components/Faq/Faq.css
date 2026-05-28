@@ -1,0 +1,133 @@
+  .clubfaq{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .clubfaq img{
+    width: 30rem;
+    height: 30rem;
+  }
+  .clubfaq_card {
+    background: var(--color-bg-variant);
+    gap: 1.5rem 5rem;
+    align-items: flex-start;
+    padding: 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    width: 35rem;
+    margin: 2rem;
+  }
+
+  .clubfaq_card.selected{
+    gap: 1.5rem 5rem;
+  }
+  
+  .clubfaq_card div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .clubfaq_card h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-light);
+  }
+  .clubfaq_button {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    background: transparent;
+  }
+  .clubfaq_answer{
+    display: none;
+  }
+  .clubfaq_answer.selected{
+    display: block;
+  }
+  .clubfaq_answer p {
+    font-size: 1rem;
+    color: var(--color-light);
+    margin-top: 1rem;
+  }
+  
+  
+  /* New style for larger screens, show two cards in a row */
+  @media (min-width: 1084px) {
+    .clubfaq_container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem; 
+      margin: 2rem auto 0 auto;
+    }
+    
+  .clubfaq_card {
+    margin: 2rem;
+  }
+  .clubfaq_card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .clubfaq_answer p {
+    font-size: 0.9rem;
+  }
+  }
+
+@media (max-width: 768px) {
+    .clubfaq_container {
+      display: block;
+      margin: 1rem auto 0 auto;
+    }
+  
+    .clubfaq_card {
+      grid-template-columns: 1fr;
+      display: wrap;
+    }
+  }
+  
+  
+@media (max-width: 650px) {
+  
+  .clubfaq img{
+    width: 25rem;
+    height: 25rem;
+  }
+  .clubfaq_card {
+    width: 25rem
+  }
+  .clubfaq_card h3 {
+    font-size: 1rem;
+  }
+  
+  .clubfaq_answer p {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 480px) {
+  
+  .clubfaq img{
+    width: 20rem;
+    height: 20rem;
+  }
+  .clubfaq_card {
+    width: 20rem
+  }
+}
+@media (max-width: 380px) {
+  .clubfaq img{
+    width: 15rem;
+    height: 15rem;
+  }
+  .clubfaq_card {
+    width: 15rem
+  }
+}
+@media (max-width: 320px) {
+  .clubfaq img{
+    width: 13rem;
+    height: 13rem;
+  }
+  .clubfaq_card {
+    width: 13rem
+  }
+}

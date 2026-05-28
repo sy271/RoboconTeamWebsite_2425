@@ -1,0 +1,65 @@
+{
+  "name": "robocon-website",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/runtime": "^7.29.7",
+    "@bradgarropy/next-seo": "^1.2.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "assert": "^2.1.0",
+    "astro": "^6.3.8",
+    "baseline-browser-mapping": "^2.10.32",
+    "buffer": "^6.0.3",
+    "caniuse-lite": "^1.0.30001793",
+    "constants-browserify": "^1.0.0",
+    "cors": "^2.8.6",
+    "dayjs": "^1.11.21",
+    "express": "^5.2.1",
+    "interactive": "^0.1.9",
+    "js-cookie": "^3.0.7",
+    "next": "^16.2.6",
+    "os-browserify": "^0.3.0",
+    "path": "^0.12.7",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-icons": "^5.6.0",
+    "react-native-swiper": "^1.6.0",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^7.15.1",
+    "react-scripts": "^5.0.1",
+    "react-swipeable": "^7.0.2",
+    "stream-browserify": "^3.0.0",
+    "typed.js": "^3.0.0",
+    "web-vitals": "^5.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "serve": "node server.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  }
+}

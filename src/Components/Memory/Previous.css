@@ -1,0 +1,289 @@
+/* Previous.css */
+.previous-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem; /* Adjust as needed */
+  }
+  
+  .previous-card {
+    perspective: 1500px;
+    margin-top: 1rem; /* Adjust as needed */
+  }
+  
+  #pic {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50rem;
+    height: 20rem;
+    transform-style: preserve-3d;
+    animation: action 60s infinite linear;
+    will-change: transform;
+  }
+  
+  #pic:hover {
+    cursor: pointer;
+  }
+  
+  #pic.paused {
+    animation-play-state: paused;
+  }
+
+  @keyframes action {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  #pic img {
+    width: 30rem;
+    height: 18rem;
+    position: absolute;
+    -webkit-box-reflect: below 15px linear-gradient(transparent 20%, rgba(255, 255, 255, 0.3));
+    display: block;
+    
+    
+    
+  }
+
+  #pic img.show {
+    opacity: 1; /* Fade-in effect when the class is added */
+    animation: fadeIn 1s ease forwards;
+  }
+
+  #pic img.enlarged {
+    transform: scale(1.5); /* Scale up the image*/
+    z-index: 10; /*Ensure the clicked image is on top*/
+    transition: transform 0.3s ease; /* Smooth transition for enlargement */
+  } 
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  #pic img:nth-child(1) {
+    transform: translateZ(500px);
+  }
+  
+  #pic img:nth-child(2) {
+    transform: rotateY(60deg) translateZ(500px);
+  }
+  
+  #pic img:nth-child(3) {
+    transform: rotateY(120deg) translateZ(500px);
+  }
+  #pic img:nth-child(4) {
+    transform: rotateY(180deg) translateZ(500px);
+  }
+  #pic img:nth-child(5) {
+    transform: rotateY(240deg) translateZ(500px);
+  }
+  #pic img:nth-child(6) {
+    transform: rotateY(300deg) translateZ(500px);
+  }
+  
+  /* For max-width: 1084px */
+  @media screen and (max-width: 1084px) {
+    .previous-container{
+      margin-top: 2rem;
+    }
+    .previous-card {
+      margin-top: 0rem; /* Adjust as needed */
+    }
+    #pic{
+      width: 28rem; /* Adjust as needed */
+      height: 20rem; /* Adjust as needed */
+    }
+    #pic img{
+      width: 25rem; /* Adjust as needed */
+      height: 15rem; /* Adjust as needed */
+    }
+    #pic img:nth-child(1) {
+      transform: translateZ(400px);
+    }
+    
+    #pic img:nth-child(2) {
+      transform: rotateY(60deg) translateZ(400px);
+    }
+    
+    #pic img:nth-child(3) {
+      transform: rotateY(120deg) translateZ(400px);
+    }
+    #pic img:nth-child(4) {
+      transform: rotateY(180deg) translateZ(400px);
+    }
+    #pic img:nth-child(5) {
+      transform: rotateY(240deg) translateZ(400px);
+    }
+    #pic img:nth-child(6) {
+      transform: rotateY(300deg) translateZ(400px);
+    }
+    
+  }
+  
+  @media screen and (max-width: 1024px) {
+    #pic img{
+      width: 20rem; /* Adjust as needed */
+      height: 13rem; /* Adjust as needed */
+    }
+    #pic img:nth-child(1) {
+      transform: translateZ(300px);
+    }
+    
+    #pic img:nth-child(2) {
+      transform: rotateY(60deg) translateZ(300px);
+    }
+    
+    #pic img:nth-child(3) {
+      transform: rotateY(120deg) translateZ(300px);
+    }
+    #pic img:nth-child(4) {
+      transform: rotateY(180deg) translateZ(300px);
+    }
+    #pic img:nth-child(5) {
+      transform: rotateY(240deg) translateZ(300px);
+    }
+    #pic img:nth-child(6) {
+      transform: rotateY(300deg) translateZ(300px);
+    }
+    
+  }
+  /* For max-width: 600px */
+  @media screen and (max-width: 620px) {
+    .previous-container {
+      margin-top: 0rem; /* Adjust as needed */
+    }
+    .previous-card{
+      margin-top: 0rem; /* Adjust as needed */
+    }
+    #pic{
+      margin-top: 0rem;
+    }
+    #pic img{
+      width: 14rem; /* Adjust as needed */
+      height: 11rem; /* Adjust as needed */
+    }
+    #pic img:nth-child(1) {
+      transform: translateZ(220px);
+    }
+    
+    #pic img:nth-child(2) {
+      transform: rotateY(60deg) translateZ(220px);
+    }
+    
+    #pic img:nth-child(3) {
+      transform: rotateY(120deg) translateZ(220px);
+    }
+    #pic img:nth-child(4) {
+      transform: rotateY(180deg) translateZ(220px);
+    }
+    #pic img:nth-child(5) {
+      transform: rotateY(240deg) translateZ(220px);
+    }
+    #pic img:nth-child(6) {
+      transform: rotateY(300deg) translateZ(220px);
+    }
+  }
+  @media screen and (max-width: 500px) {
+    
+    #pic{
+      width: 15rem; /* Adjust as needed */
+      height: 15rem; /* Adjust as needed */
+    }
+    #pic img{
+      width: 12rem; /* Adjust as needed */
+      height: 8rem; /* Adjust as needed */
+    }
+    #pic img:nth-child(1) {
+      transform: translateZ(200px);
+    }
+    
+    #pic img:nth-child(2) {
+      transform: rotateY(60deg) translateZ(200px);
+    }
+    
+    #pic img:nth-child(3) {
+      transform: rotateY(120deg) translateZ(200px);
+    }
+    #pic img:nth-child(4) {
+      transform: rotateY(180deg) translateZ(200px);
+    }
+    #pic img:nth-child(5) {
+      transform: rotateY(240deg) translateZ(200px);
+    }
+    #pic img:nth-child(6) {
+      transform: rotateY(300deg) translateZ(200px);
+    }
+  
+  }
+  @media screen and (max-width: 410px) {
+    .previous-container {
+      margin-top: 0rem; /* Adjust as needed */
+    }
+    #pic img{
+      width: 150px; /* Adjust as needed */
+      height: 120px; /* Adjust as needed */
+    }
+    #pic img:nth-child(1) {
+      transform: translateZ(150px);
+    }
+    
+    #pic img:nth-child(2) {
+      transform: rotateY(60deg) translateZ(150px);
+    }
+    
+    #pic img:nth-child(3) {
+      transform: rotateY(120deg) translateZ(150px);
+    }
+    #pic img:nth-child(4) {
+      transform: rotateY(180deg) translateZ(150px);
+    }
+    #pic img:nth-child(5) {
+      transform: rotateY(240deg) translateZ(150px);
+    }
+    #pic img:nth-child(6) {
+      transform: rotateY(300deg) translateZ(150px);
+    }
+  }
+  @media screen and (max-width: 320px) {
+    
+    #pic{
+      width: 8rem; /* Adjust as needed */
+      height: 8rem; /* Adjust as needed */
+    }
+    #pic img{
+      width: 7rem; /* Adjust as needed */
+      height: 5rem; /* Adjust as needed */
+    }
+    #pic img:nth-child(1) {
+      transform: translateZ(110px);
+    }
+    
+    #pic img:nth-child(2) {
+      transform: rotateY(60deg) translateZ(110px);
+    }
+    
+    #pic img:nth-child(3) {
+      transform: rotateY(120deg) translateZ(110px);
+    }
+    #pic img:nth-child(4) {
+      transform: rotateY(180deg) translateZ(110px);
+    }
+    #pic img:nth-child(5) {
+      transform: rotateY(240deg) translateZ(110px);
+    }
+    #pic img:nth-child(6) {
+      transform: rotateY(300deg) translateZ(110px);
+    }
+  
+  }

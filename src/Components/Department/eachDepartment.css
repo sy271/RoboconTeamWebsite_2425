@@ -1,0 +1,258 @@
+.eachDepartment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    text-align: center;
+    transition: var(--transition);
+    color: var(--color-primary);
+    margin-top: 3rem;
+  }
+
+  .eachDepartment:hover{
+    border: solid 1rem var(--color-primary);
+  }
+  
+  .eachDepartment_head{
+    object-fit: cover;
+    width: 9rem;
+    height: 9rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+  }
+  
+  .eachDepartment_head img{
+    width: 7rem;
+    height: 7rem;
+  }
+  
+  .eachDepartment_logo h2 {
+    margin-top: 100px;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  
+  .head_member {
+    text-align: center;
+    margin-bottom: 1rem;
+    transition: var(--transition);
+  }
+  
+  .head_member:hover{
+    transform: scale(1.1);
+  }
+  .head_member img{
+    width: 18rem;
+    height: 18rem;
+    border-radius: 10%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    align-items: center;
+  }
+  
+  .head_member h3{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 1rem;
+  }
+  .member {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 4rem 2rem;
+    transition: var(--transition);
+  }
+
+  .member:hover{
+    transform: scale(1.05);
+  }
+
+  .prog-member{
+    display: flex;
+    row-gap: 4rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    margin: 4rem 2rem;
+    transition: var(--transition);
+  }
+  
+  .prog-member:hover{
+    transform: scale(1.05);
+  }
+
+  .under-maintenance h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  
+  .typewrite {
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .typewrite > .wrap {
+    border-right: 0.08em solid #fffefd;
+  }
+  
+  .member_info {
+    text-align: center;
+    height: 300px;
+    width: 300px;
+    display: table;
+    justify-content: center;
+    margin: 2rem;
+  }
+
+  .prog-member_info {
+    text-align: center;
+    height: 20rem;
+    width: 18rem;
+    margin: 1rem;
+    display: table;
+    justify-content: center;
+  }
+
+  .member_info h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 1rem;
+  }
+
+  .member_info .member_picture img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+  }
+
+  .prog-member_info .member_picture img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+  }
+
+  .prog-member_info h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 1rem;
+  }
+  
+  .member_picture p{
+    font-size: 1rem;
+  }
+
+  .electro-member{
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    margin: 4rem 2rem;
+    transition: var(--transition);
+  }
+
+  .electro-member:hover{
+    transform: scale(1.05);
+  }
+
+  .electro-member_info {
+    text-align: center;
+    height: 20rem;
+    width: 20rem;
+    margin: 2rem;
+    display: table;
+    justify-content: center;
+    margin: 2rem;
+  }
+
+  .electro-member_info .member_picture img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+  }
+
+  .position{
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+  @media screen and (max-width: 1024px) {
+    .eachDepartment_head{
+      width: 6rem;
+      height: 6rem;
+    }
+    #programming h2,
+    #electronic h2,
+    #mechanism h2{
+      font-size: 2.4rem;
+    }
+    .eachDepartment_head img{
+      width: 4rem;
+      height: 4rem;
+    }
+    .head_member img{
+      width: 10rem;
+      height: 10rem;
+    }
+    .head_member h3{
+      font-size: 1.8rem;  
+    }
+    .member_info .member_picture img,
+    .electro-member_info .member_picture img,
+    .prog-member_info .member_picture img {
+      width: 8rem;
+      height: 8rem;
+    }
+    .member_info h3{
+      font-size: 1.4rem;
+    }
+
+    .prog-member, 
+    .electro-member,
+    .member{
+      gap: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    #programming h2,
+    #electronic h2,
+    #mechanism h2{
+      font-size: 1.5rem;
+    }
+    .eachDepartment_head img{
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+    .head_member{
+      margin-top: 2rem;
+    }
+    .head_member h3{
+      font-size: 1.4rem;  
+    }
+    .member_info h3{
+      font-size: 1.2rem;
+    }
+    
+    .member_info p{
+      font-size: 0.9rem;
+    }
+  }

@@ -1,0 +1,242 @@
+/* General container styles */
+.partnership_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  overflow: hidden; /* Hide overflow */
+}
+
+.diamond_sponsors h3,
+.platinum_sponsors h3,
+.silver_sponsors h3,
+.gold_sponsors h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-light);
+  margin-bottom: 2rem;
+}
+
+.diamond_sponsors,
+.platinum_sponsors,
+.gold_sponsors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.diamond_sponsors .sponsors_grid,
+.platinum_sponsors .sponsors_grid,
+.gold_sponsors .sponsors_grid {
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center; /* Center elements within the grid */
+  align-items: center;
+  width: 100%; /* Ensure the grid takes up full width */
+}
+
+/* Sponsor card styles */
+
+.diamond_sponsors .sponsor {
+  width: 25rem; 
+  height: 40rem;
+  background-color: var(--color-primary2);
+  box-shadow: 0 4px 8px var(--color-light);
+  display: grid;
+  grid-template-rows: 10rem 4rem 18rem 5rem; /* Adjust as needed */
+  justify-content: center; /* Changed to flex-start to align items at the top */
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  border: 1em solid var(--color-light);
+  color: var(--color-black);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  z-index: 1; 
+}
+.platinum_sponsors .sponsor {
+  width: 23rem; 
+  height: 36rem;
+  background-color: var(--color-primary2);
+  box-shadow: 0 4px 8px var(--color-light);
+  display: grid;
+  grid-template-rows: 11rem 3.5rem 15rem 3rem; /* Adjust as needed */
+  justify-content: flex-start; /* Changed to flex-start to align items at the top */
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  border: 1em solid var(--color-light);
+  color: var(--color-black);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  z-index: 1; 
+}
+.gold_sponsors .sponsor {
+  width: 20rem; 
+  height: 20rem;
+  background-color: var(--color-primary2);
+  box-shadow: 0 4px 8px var(--color-light);
+  display: grid;
+  grid-template-rows: 6rem 4rem 3rem; /* Adjust as needed */
+  justify-content: flex-start; /* Changed to flex-start to align items at the top */
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  border: 1em solid var(--color-light);
+  color: var(--color-black);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  z-index: 1; 
+  margin-bottom: 2rem;
+}
+
+.sponsor img {
+  width: 100%;
+  height: 100%;
+}
+
+.sponsor h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-light);
+  margin: 0.5rem 0;
+}
+
+.sponsor p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-white);
+  margin: 0.5rem 0;
+}
+
+.gold_sponsors .sponsor p {
+  display: none;
+}
+
+.sponsor:hover {
+  transform: scale(1.1);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.platinum_sponsors .sponsor_details{
+  display: flex;
+  height: 13rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+.sponsor_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+.social_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social_links .btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: inline-block;
+  align-items: center;
+  padding: 0.1rem;
+  justify-content: center;
+  border: 0;
+  color: var(--color-bg-variant);
+}
+
+.tooltiptext {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .diamond_sponsors .sponsors_container,
+  .platinum_sponsors .sponsors_container,
+  .gold_sponsors .sponsors_container {
+    padding: 0rem;
+  }
+  .diamond_sponsors .sponsor {
+    width: 25rem;
+    height: 35rem;
+    grid-template-rows: 8rem 5rem 15.5rem 4rem; /* Adjust as needed */
+  }
+
+  .sponsor .btn {
+    font-size: 1.5rem;
+  }
+  .platinum_sponsors .sponsor {
+    width: 22rem;
+    height: 32rem;
+    grid-template-rows: 7rem 6rem 12.5rem 4rem;
+  }
+
+  .gold_sponsors .sponsor {
+    width: 16rem;
+    height: 16rem;
+    grid-template-rows: 5rem 5rem 0rem 4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .diamond_sponsors .sponsor {
+    width: 20rem;
+    height: 28rem;
+    grid-template-rows: 5rem 4rem 14rem 2rem;
+  }
+  .diamond_sponsors .sponsor h4,
+  .platinum_sponsors .sponsor h4,
+  .gold_sponsors .sponsor h4{
+    font-size: 1.2rem;
+    padding: 0rem;
+  }
+  .diamond_sponsors .sponsor p,
+  .platinum_sponsors .sponsor p,
+  .gold_sponsors .sponsor p{
+    font-size: 0.8rem;
+    padding: 0rem;
+    margin: 0rem;
+  }
+  .diamond_sponsors .sponsor img,
+  .platinum_sponsors .sponsor img,
+  .gold_sponsors .sponsor img{
+    width: 80%;
+  }
+  .diamond_sponsors .sponsor .btn,
+  .platinum_sponsors .sponsor .btn,
+  .gold_sponsors .sponsor .btn {
+    font-size: 1.2rem;
+  }
+
+  .sponsor_images{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .sponsor_images img {
+    display: block !important; /* Ensures that the image itself is displayed */
+  }
+  .platinum_sponsors .sponsor {
+    width: 18rem;
+    height: 26rem;
+    grid-template-rows: 5rem 3.5rem 13rem 1rem;
+  }
+
+  .gold_sponsors .sponsor {
+    width: 15rem;
+    height: 15rem;
+    grid-template-rows: 5rem 4rem 0rem 2rem;
+  }
+}

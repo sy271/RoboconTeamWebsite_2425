@@ -1,0 +1,142 @@
+.autocar_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.autocar_btn{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+.btn-autocar{
+    width: 10rem;
+    height: 4rem;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.autocar_gamerules,
+.autocar_faq,
+.autocar_prize{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.autocar_prize-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 2rem;
+}
+.autocar_prize-card h2{
+    color: var(--color-bg-variant);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.autocar_prize-card ul{
+    display: circle;
+}
+.autocar_prize-card ul li{
+    font-size: 1rem;
+    color: var(--color-bg);
+}
+.autocar_prize-card{
+    box-shadow: 0 0 0px 4px var(--color-white);
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.autocar_title h3{
+    color: var(--color-primary-variant);
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+.autocar_card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.autocar_card-content h3{
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+    .autocar_card-content{
+        width: 18rem;
+    }
+    .autocar_card-content img{
+        width:15rem;
+        height: 10rem;
+        margin-top: 0;
+    }
+    .autocar_card-content h3{
+        font-size: 1.1rem;
+    }
+
+    .btn-autocar{
+        width: 7rem;
+        font-size: 0.8rem;
+    }
+      
+    .autocar_prize-card{
+        width: 12rem;
+        height: 12rem;
+    }
+    .autocar_prize-card h2{
+        font-size: 1.1rem;
+    }
+    .autocar_prize-card ul li{
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+
+    .btn-autocar{
+        width: 5rem;
+        height: 3rem;
+        font-size: 0.8rem;
+    }
+    .autocar_card-content{
+        width: 15rem;
+    }
+    .autocar_card-content img{
+        width:13rem;
+        height: 10rem;
+        margin-top: 0;
+    }
+    
+    .autocar_card-content h3{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    .btn-autocar{
+        width: 4rem;
+        height: 2rem;
+        font-size: 0.6rem;
+    }
+}

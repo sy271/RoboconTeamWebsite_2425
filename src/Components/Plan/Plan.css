@@ -1,0 +1,284 @@
+  
+  #plans{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .plans_container {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .plans_title {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    background: var(--color-venetianRed);
+    border: 6px solid var(--color-bloodRed);
+    width: 50rem;
+    animation: colorChange 5s alternate infinite; /* Add this animation property */
+  }
+  
+  @keyframes colorChange {
+    0% {
+      background: var(--color-venetianRed);
+      border-color: var(--color-bloodRed);
+    }
+    50% {
+      background: var(--color-bloodRed);
+      border-color: var(--color-venetianRed);
+    }
+    100% {
+      background: var(--color-venetianRed);
+      border-color: var(--color-bloodRed);
+    }
+  }
+  
+  .plans_title h3 {
+    font-size: 2rem;
+    color: var(--color-white);
+    text-align: center;
+  }
+  
+  .plans_title p {
+    font-size: 1.2rem;
+    color: var(--color-light);
+    text-align: center;
+  }
+
+  .plans_card {
+    background-color: var(--color-bg);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px var(--color-light);
+    padding: 2rem;
+    width: 25rem;
+    height: 42rem;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .plans_card:hover{
+    box-shadow: 0px 0px 10px var(--color-primary);
+    background: transparent;
+  }
+  .plans_card .plans_logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-bg-variant);
+    color: var(--color-primary);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    width: 5rem;
+    height: 5rem;
+  }
+  .plans_card h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--color-white);
+    text-align: center;
+    height: 6rem;
+  }
+  
+  .plans_card h4 {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    margin: 10px 0;
+    text-align: center;
+    height: 3rem;
+  }
+  
+  .plans_card p {
+    font-size: 1rem;
+    color: var(--color-light);
+    height: 12rem;
+  }
+  
+  .plans_card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  
+  .plans_card ul li {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--color-primary1)
+  }
+  
+  .plans_card ul li.disabled {
+    color: var(--color-primary1-variant)
+  }
+
+  
+  .autocar_card-content {
+    margin: 2rem;
+    background: var(--color-bg-variant);
+    transition: var(--transition);
+    border-radius: 5px;
+  }
+  
+  .autocar_card-content:hover{
+    transform: translate(0, -10px);
+  }
+  .autocar_card-content img{
+    width: 400px;
+    height: 200px;
+    margin: 1rem;
+    border-radius: 5px;
+  }
+  
+  .autocar_card-content h3{
+    color: var(--color-primary);
+  }
+
+  .plan_btn{
+    margin-top: 2rem;
+  }
+
+  .choose_btn{
+    width: 10rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .choose_btn a{
+    font-size: 1rem;
+  }
+
+  .plan_btn img{
+    width: 15rem;
+    height: 15rem;
+  }
+  @media screen and (max-width: 1200px) {
+    .plans_card {
+      width: 35rem;
+      height: 45rem;
+    }
+    .plans_card p {
+      height: 18rem;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+      
+    .plans_title {
+      width: 40rem;
+    }
+    .plans_container{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+    .plans_card{
+      width: 35rem;
+      height: 35rem;
+    }
+    .plans_card h3 {
+      height: auto;
+    }
+    .plans_card h4 {
+      height: auto;
+    }
+    .plans_card p {
+      height: auto;
+      margin: 1rem 0;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .plans_title {
+      width: 30rem;
+    }
+    .plans_title h3{
+      font-size: 1.5rem;
+    }
+    .plans_title p{
+      font-size: 1rem;
+    }
+    .plans_card {
+      width: 20rem;
+      height: 35rem;
+    }
+    .plans_card h3 {
+      font-size: 1.8rem;
+      height: auto;
+    }
+    .plans_card h4 {
+      font-size: 1.5rem;
+      height: auto;
+    }
+    .plans_card p {
+      font-size: 0.8rem;
+      height: auto;
+    }
+      
+    .plan_btn p{
+      font-size: 1.5rem;
+    }
+
+  }
+
+  @media screen and (max-width: 550px) {
+    .plans_title {
+      width: 25rem;
+    }
+    .plans_title h3{
+      font-size: 1.2rem;
+    }
+    .plans_title p{
+      font-size: 0.9rem;
+    }
+  } 
+  
+  @media screen and (max-width: 400px) {
+    .plans_title {
+      width: 18rem;
+    }
+    .plans_card {
+      width: 18rem;
+      height: 35rem;
+    }
+    .plans_card h3 {
+      font-size: 1.5rem;
+      height: auto;
+    }
+    .plans_card h4 {
+      font-size: 1.3rem;
+      height: auto;
+    }
+    .plans_card p {
+      font-size: 0.8rem;
+      height: auto;
+    }
+    .plans_card ul li {
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    
+    .plans_card {
+      width: 18rem;
+      height: 38rem;
+    }
+  }
+  
+  
