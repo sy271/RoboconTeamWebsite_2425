@@ -7,6 +7,8 @@ import OpenHouse from '../../Picture/2024/2024OpenHouse.JPG';
 import VietnamTrip from '../../Picture/2024/Vietnam.JPG';
 import ABU2024 from '../../Picture/2024/2024ABUAward.JPG';
 
+const imagesList = [PinangTrip, FriendlyMatch, VietnamTrip, OpenHouse, FarewellParty, ABU2024];
+
 const Previous = () => {
   const [isAnimationPaused, setAnimationPaused] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null); //to track which image is clicked
@@ -28,10 +30,10 @@ const Previous = () => {
 
   const handleImageClick = (index) => {
     if(selectedImage === index){
-      setSelectedImage(index); //Reset if the same image is clicked
+      setSelectedImage(null); //Reset if the same image is clicked
       setAnimationPaused(false); //Resume animation when deselecting the image
     }else{
-      setSelectedImage(null); //Set the clicked image
+      setSelectedImage(index); //Set the clicked image
       setAnimationPaused(true); //Pause animation when selecting the image
     }
   };
@@ -110,6 +112,13 @@ const Previous = () => {
           </div>
         </div>
       </div>
+
+      {selectedImage !== null && (
+        <div className="previous-modal" onClick={() => handleImageClick(selectedImage)}>
+          <span className="close-modal">&times;</span> 
+          <img src={imagesList[selectedImage]} alt="Enlarged" />
+        </div>
+      )}
     </section>
   );
 };

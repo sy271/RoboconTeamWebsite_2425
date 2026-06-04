@@ -57,9 +57,8 @@
   }
 
   #pic img.enlarged {
-    transform: scale(1.5); /* Scale up the image*/
-    z-index: 10; /*Ensure the clicked image is on top*/
-    transition: transform 0.3s ease; /* Smooth transition for enlargement */
+    /* Kept class to avoid React errors, but disabled the inline scale so it doesn't mess up the 3D rotataion anymore */
+    filter: brightness(0.8);
   } 
   
   @keyframes fadeIn {
@@ -156,8 +155,67 @@
     #pic img:nth-child(6) {
       transform: rotateY(300deg) translateZ(300px);
     }
-    
   }
+
+/* Modal Overlay Styles */
+.previous-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.previous-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+  animation: modalFadeIn 0.3s ease-out forwards;
+}
+
+.close-modal {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-modal:hover {
+  color: #ff4757;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    transform: rotateY(180deg) translateZ(300px);
+  
+  #pic img:nth-child(5) {
+    transform: rotateY(240deg) translateZ(300px);
+  }
+  #pic img:nth-child(6) {
+    transform: rotateY(300deg) translateZ(300px);
+  }
+  }
+}
+    
+  
   /* For max-width: 600px */
   @media screen and (max-width: 620px) {
     .previous-container {
